@@ -1,0 +1,53 @@
+
+body{
+    background-color: yellow;
+    text-align: center;
+    margin: 20px 250px 20px 250px; 
+
+}
+
+h1{
+    font-weight: 100px ;
+    font-size: 250%;
+color: #ffffff;
+
+}
+h3{
+    font-weight: 100 ;
+    font-size: 250%;
+
+    color: rgb(255, 255, 255);
+    margin: 20px 20px 20px 20px; 
+
+}
+select{
+    cursor: pointer; 
+    border: 1px solid #ccc; 
+    background: #eee; 
+    border-radius: 20px 20px 20px 20px; 
+    height: 50px;
+    width: 300px;
+
+    font-size: 20px;
+}
+
+form{
+    background-color: #0e1753;
+    border-radius: 30px;
+    padding-top: 120px;
+    padding-block-end: 120px;
+    text-align: center;
+}
+
+input { 
+    cursor: pointer; 
+    border: 1px solid #ccc; 
+    background: #eee; 
+    border-radius: 20px 20px 20px 20px; 
+    height: 50px;
+    width: 300px;
+
+    font-size: 20px;
+    
+} 
+

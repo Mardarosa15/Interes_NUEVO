@@ -36,7 +36,7 @@ if(isset($_POST['Calcular'])){
      echo "<h1>"."Luego de $n períodos de tiempo acumularías o pagarías un capital de:"."</h1>";
      echo "<h1>"."Acércate al mostrador más cercano para comenzar tu transacción"."</h1>";
      echo "<h1>"."¡Gracias por elegirnos!"."</h1>";
-     echo "<img src='IMG/liceo-impulso.png' width='200' height='200'>";*/
+     echo "<img src='IMG/liceo-impulso.png' width='200' height='200'>";
     }
 
 

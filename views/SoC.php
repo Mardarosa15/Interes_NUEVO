@@ -11,7 +11,7 @@
     <div class="div1">
         <form action="" method="post">
         <h1>¿Bajo qué tipo de interés?</h1>
-        <h3>Acérquese al personal si no sabe las diferencia entre estos.</h3>
+        <h2 class="sub">Acérquese al personal si no sabe las diferencia entre estos.</h2>
             <input type="submit" value="Simple" name="Simple">
             <input type="submit" value="Compuesto" name="Compuesto">
         </form>
@@ -23,7 +23,7 @@
     }
     if (isset($_POST['Compuesto'])) {
       
-      header("Location: ../controlador/controladorSimple.php");
+      header("Location: ../controlador/controladorCompuesto.php");
     }
     ?>
 </body>

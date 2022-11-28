@@ -14,11 +14,16 @@ color: #ffffff;
 }
 h3{
     font-weight: 100 ;
-    font-size: 250%;
+    font-size: 30px;
 
-    color: rgb(255, 255, 255);
-    margin: 20px 20px 20px 20px; 
+    color: rgb(0, 0, 0);
+  
 
+}
+
+
+.sub{
+    color:#FFF;
 }
 select{
     cursor: pointer; 
@@ -50,4 +55,15 @@ input {
     font-size: 20px;
     
 } 
+
+.radio{
+    width: 100px ;
+    height: 25px;
+    
+}
+
+label{
+    font-size: 25px;
+    color: #FFF;
+}
 

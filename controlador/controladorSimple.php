@@ -12,9 +12,10 @@ if(isset($_POST['Calcular'])){
     $interes=$_POST['interes'];
     $periodos=$_POST['n'];
     $tipoPer=$_POST['tipoN'];
+    $capitalizacion=$_POST['Cap'];
 
     
-    if(empty($CI) || empty($moneda) || empty($interes) || empty($periodos) || empty($tipoPer)){
+    if(empty($CI) || empty($moneda) || empty($interes) || empty($periodos) || empty($tipoPer) || empty($capitalizacion)){
         echo "<script>
         Swal.fire({
     icon: 'error',
@@ -25,18 +26,36 @@ if(isset($_POST['Calcular'])){
     </script>";
             
     }else{
-        $calculo= new Banco($CI, $periodos, $moneda, $tipoPer, $interes);
+        $calculo= new Banco($CI, $periodos, $moneda, $tipoPer, $interes, $capitalizacion);
 
-        $CF=$calculo->calcularInteresSimple($CI, $periodos, $interes, $tipoPer);
+        $N=$calculo->convertirTiempo($capitalizacion, $tipoPer, $periodos);
+        $CF=$calculo->calcularInteresSimple($CI, $N, $interes, $tipoPer);
 
+        
 
         //echo $calculo->montoGenerado();
 
-    
-     echo "<h1>"."Luego de $n períodos de tiempo acumularías o pagarías un capital de:"."</h1>";
+        if($tipoPer == 'A'){ $tipoM='años';}else if($tipoPer=='M'){  $tipoM='meses'; }else if($tipoPer=="D"){$tipoM='días';}
+
+        echo "<script>
+        
+        Swal.fire({
+            icon: 'success',
+        html: `<h2>Ticket</h2>
+        <h3>"."Luego de $periodos ".$tipoM." obtendrás: <strong>".$moneda.$CF."</strong></h3>
+        <h3>"."Monto generado: ".$moneda.$calculo->montoGenerado()."</h3>
+        <br>
+        <h4>"."Acércate al mostrador más cercano para comenzar tu transacción"."</h4>
+        <img src='../views/IMG/liceo-impulso.png' width='100' height='100'>
+        `,
+        });
+    </script>";
+
+
+        /*echo "<h1>"."Luego de $periodos ".$tipoM." acumularías: ".$moneda.$CF."</h1>";
      echo "<h1>"."Acércate al mostrador más cercano para comenzar tu transacción"."</h1>";
      echo "<h1>"."¡Gracias por elegirnos!"."</h1>";
-     echo "<img src='IMG/liceo-impulso.png' width='200' height='200'>";
+     echo "<img src='IMG/liceo-impulso.png' width='200' height='200'>";*/
     }
 
 

@@ -42,10 +42,10 @@ if(isset($_POST['Calcular'])){
         Swal.fire({
             icon: 'success',
         html: `<h2>Ticket</h2>
-        <h3>"."Luego de $periodos ".$tipoM." obtendrás: <strong>".$moneda.$CF."</strong></h3>
-        <h3>"."Monto generado: ".$moneda.$calculo->montoGenerado()."</h3>
+        <h4>"."Luego de $periodos ".$tipoM." obtendrás: <strong>".$moneda.$CF."</strong></h4>
+        <h4>"."Monto generado: ".$moneda.$calculo->montoGenerado()."</h4>
         <br>
-        <h4>"."Acércate al mostrador más cercano para comenzar tu transacción"."</h4>
+        <h5>"."Acércate al mostrador más cercano para comenzar tu transacción"."</h5>
         <img src='../views/IMG/liceo-impulso.png' width='100' height='100'>
         `,
         });

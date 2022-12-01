@@ -1,6 +1,6 @@
 
 body{
-    background-color: yellow;
+    background-color: #00aae4;
     text-align: center;
     margin: 20px 250px 20px 250px; 
 
@@ -9,15 +9,21 @@ body{
 h1{
     font-weight: 100px ;
     font-size: 250%;
-color: #ffffff;
-
+    color: #efe44a;
+    animation-duration: 3s;
+    animation-name: slidein;
+}
+h2{
+    animation-duration: 3s;
+    animation-name: slidein;
 }
 h3{
     font-weight: 100 ;
     font-size: 30px;
 
-    color: rgb(0, 0, 0);
-  
+    color: #efe44a;
+    animation-duration: 3s;
+    animation-name: slidein;
 
 }
 
@@ -39,7 +45,7 @@ select{
 form{
     background-color: #0e1753;
     border-radius: 30px;
-    padding-top: 120px;
+    padding-top: 100px;
     padding-block-end: 120px;
     text-align: center;
 }
@@ -64,6 +70,19 @@ input {
 
 label{
     font-size: 25px;
-    color: #FFF;
+    color: #efe44a;;
 }
 
+
+@keyframes slidein {
+    from {
+      margin-left: 0%;
+      width:300%
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
+  

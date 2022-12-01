@@ -48,6 +48,8 @@ if(isset($_POST['Calcular'])){
         <h5>"."Acércate al mostrador más cercano para comenzar tu transacción"."</h5>
         <img src='../views/IMG/liceo-impulso.png' width='100' height='100'>
         `,
+        }).then(function(){
+            window.location = '../index.php';
         });
     </script>";
 
